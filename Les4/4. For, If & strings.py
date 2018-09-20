@@ -1,2 +1,3 @@
 lst = ('maandag', 'dinsdag', 'woensdag',)
-print(lst)
+for char in lst:
+    print(char[0] +char[1])

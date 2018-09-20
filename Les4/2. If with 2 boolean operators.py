@@ -8,7 +8,8 @@ while True:
     else:
         break
 NederlandsPaspoort = input('Ben je in bezit van een Nederlands passpoort?: ')
-if leeftijd > leeftijdMeerderjarig and  NederlandsPaspoort in bezitPaspoort :
-    print('Gefeliciteerd, je mag stemmen!')
+wilStemmen = input("Wil je graag stemmen?: ")
+if leeftijd > leeftijdMeerderjarig and  NederlandsPaspoort in bezitPaspoort  and wilStemmen in bezitPaspoort:
+    print('Gefeliciteerd, je mag stemmen en wil stemmen!')
 else:
-    print('Je mag niet stemmen')
+    print('Je mag niet stemmen ga maar weg nu!')
