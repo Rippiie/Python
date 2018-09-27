@@ -3,10 +3,9 @@ bezitPaspoort = ['Ja', 'ja', 'yes', 'Yes', 'y', 'Y', 'j', 'J',]
 while True:
     try:
         leeftijd = int(input("Geef je leeftijd: "))
+        break
     except ValueError:
         print("Voer een geldig getal in!")
-    else:
-        break
 NederlandsPaspoort = input('Ben je in bezit van een Nederlands passpoort?: ')
 wilStemmen = input("Wil je graag stemmen?: ")
 if leeftijd > leeftijdMeerderjarig and  NederlandsPaspoort in bezitPaspoort  and wilStemmen in bezitPaspoort:
