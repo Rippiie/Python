@@ -2,7 +2,7 @@ def menu():
     while True:
         while True:
             try:
-                keuze = int(input('\n1: Ik wil weten hoeveel kluizen nog vrij zijn \nIk wil een nieuwe kluis \n3: Ik wil even iets uit mijn kluis halen \n4: Ik geef mijn kluis terug\n5: Ik wil stoppen :'))
+                keuze = int(input('\n1: Ik wil weten hoeveel kluizen nog vrij zijn \n2: Ik wil een nieuwe kluis \n3: Ik wil even iets uit mijn kluis halen \n4: Ik geef mijn kluis terug\n5: Ik wil stoppen \nVoer hier je keuze in: '))
             except ValueError:
                 print("Voer een geldig getal in")
             else:
@@ -27,7 +27,7 @@ def toon_aantal_kluizen_vrij():
     for item in content:
         if '\n' in item:
             aantalBezet = aantalBezet + 1
-    aantalVrij = 12 - aantalBezet
+    aantalVrij = 12 - aantalBezetx
     print('Er zijn {} kluizen vrij'.format(aantalVrij))
 
 def nieuwe_kluis():
@@ -46,6 +46,7 @@ def nieuwe_kluis():
             if 4 > len(invoerCode):
                 print("Voer minimaal vier karakters in!")
             else:
+                print('U heeft een nieuwe kluis gekregen')
                 break
         bestand = open('kluizen.txt', 'a')
         bestand.write('{};{}\n'.format(vrijeKluis[0], invoerCode))
@@ -70,7 +71,7 @@ def kluis_openen():
         if (str(kluisnummer) + ';' + str(codeKluisnummer) + '\n') == line:
             wachtwoordGoed = 1
     if wachtwoordGoed == 1:
-        print('De kluis is geopenend')
+        print('De kluis is geopend')
     else:
         print('Je hebt het verkeerde combinatie ingevoerd')
 
