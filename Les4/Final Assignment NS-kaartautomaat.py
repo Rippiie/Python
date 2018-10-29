@@ -1,7 +1,7 @@
 def inlezen_beginstation(stations):
     while True:
         invoer = str(input('Wat is je beginstation?: '))
-        if invoer in stations:
+        if invoer in stations and invoer != stations[-1]:
             return invoer
         else:
             print('Deze trein komt niet in {}.'.format(invoer))
